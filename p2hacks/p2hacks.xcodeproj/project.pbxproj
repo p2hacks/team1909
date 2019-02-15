@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8C36AEF52216DC7100902556 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C36AEF42216DC7100902556 /* SettingViewController.swift */; };
 		F8847C2C221165F800150E96 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8847C2B221165F800150E96 /* AppDelegate.swift */; };
 		F8847C2E221165F800150E96 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8847C2D221165F800150E96 /* ViewController.swift */; };
 		F8847C31221165F800150E96 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8847C2F221165F800150E96 /* Main.storyboard */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8C36AEF42216DC7100902556 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		F8847C28221165F800150E96 /* p2hacks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = p2hacks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8847C2B221165F800150E96 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F8847C2D221165F800150E96 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -108,6 +110,7 @@
 				F8847C2B221165F800150E96 /* AppDelegate.swift */,
 				F8847C2D221165F800150E96 /* ViewController.swift */,
 				F8847C2F221165F800150E96 /* Main.storyboard */,
+				8C36AEF42216DC7100902556 /* SettingViewController.swift */,
 				F8847C32221165FB00150E96 /* Assets.xcassets */,
 				F8847C34221165FB00150E96 /* LaunchScreen.storyboard */,
 				F8847C37221165FB00150E96 /* Info.plist */,
@@ -273,6 +276,7 @@
 				F8847C2E221165F800150E96 /* ViewController.swift in Sources */,
 				F8847C2C221165F800150E96 /* AppDelegate.swift in Sources */,
 				F8847C5A221512D900150E96 /* ProViewController.swift in Sources */,
+				8C36AEF52216DC7100902556 /* SettingViewController.swift in Sources */,
 				F8847C5C22151FC900150E96 /* QRReadViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
