@@ -11,7 +11,7 @@ import UIKit
 class ViewController2: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     var TODO = ["大学","サークル","バイト"]
-    
+  
     override func viewDidLoad() {
         super.viewDidLoad()
         

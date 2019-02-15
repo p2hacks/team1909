@@ -11,8 +11,6 @@ import UIKit
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     var TODO = ["あほ","ばか","まぬけ"]
-    var list: String = ""
-    
     @IBAction func QRbutton(){
     
     }

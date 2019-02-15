@@ -10,6 +10,11 @@ import UIKit
 import CoreImage
 class ProViewController: UIViewController {
     
+//    @IBAction func back(){
+//        performSegue(withIdentifier: "ViewController",sender: nil)
+//    }
+    
+    
     func createQRCode(message: String, correctionLevel: String = "M", moduleSize: CGFloat = 1) -> UIImage {
         
         let dat = message.data(using: String.Encoding.utf8)!
@@ -29,6 +34,15 @@ class ProViewController: UIViewController {
     @IBAction func QR(){
         createQRCode(message: "https://www.google.co.jp",moduleSize: 3)
     }
+    
+    // Segue 準備
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any!) {
+//        if (segue.identifier == "toViewController") {
+//            let _: ViewController = (segue.destination as? ViewController)!
+//        }
+//    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
