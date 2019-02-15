@@ -7,16 +7,34 @@
 //
 
 import UIKit
+import FirebaseDatabase
+import FirebaseCore
 
 class SettingViewController: UIViewController {
-
+    @IBOutlet weak var nameField: UITextField!
+    @IBOutlet weak var belongField: UITextField!
+    @IBOutlet weak var mailField: UITextField!
+    @IBOutlet weak var tellField: UITextField!
+    
+    var DBRef:DatabaseReference!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+   DBRef = Database.database().reference()
         // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func idregister(_ sender: Any) {
+        let dataName = ["name":nameField.text!]
+        let dataBelong = ["belong":belongField.text!]
+        let dataMail = ["mail":mailField.text!]
+        let dataTell = ["tell":tellField.text!]
+        DBRef.child(String(nameField.text!)+"/name").setValue(dataName)
+        DBRef.child(String(nameField.text!)+"/belong").setValue(dataBelong)
+        DBRef.child(String(nameField.text!)+"/mail").setValue(dataMail)
+        DBRef.child(String(nameField.text!)+"/tell").setValue(dataTell)
+    }
+    
     /*
     // MARK: - Navigation
 

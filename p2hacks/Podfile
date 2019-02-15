@@ -6,13 +6,15 @@ target 'p2hacks' do
   use_frameworks!
 
   # Pods for p2hacks
-
-  target 'p2hacksTests' do
-    inherit! :search_paths
-    # Pods for testing
+   # Pods for testing
  pod 'Firebase'
  pod 'Firebase/Core' 
- pod 'Firebase/Database'
+ pod 'Firebase/Database' 
+  target 'p2hacksTests' do
+  end
+
+  inherit! :search_paths
+    # Pods for testing
   end
 
   target 'p2hacksUITests' do
@@ -20,4 +22,3 @@ target 'p2hacks' do
     # Pods for testing
   end
 
-end
