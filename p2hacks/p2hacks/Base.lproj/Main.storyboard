@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="OMh-jd-cO9">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="C3u-PP-xOE">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,6 +10,34 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--View Controller-->
+        <scene sceneID="e8Y-Dc-v5d">
+            <objects>
+                <viewController id="C3u-PP-xOE" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Cgm-c4-YlK">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4qi-3A-Zxi">
+                                <rect key="frame" x="172" y="304" width="31" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="完了"/>
+                                <connections>
+                                    <segue destination="OMh-jd-cO9" kind="presentation" id="StD-Zh-Dvu"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="ZgB-mx-iax"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="r9f-V1-JsL">
+                        <barButtonItem key="rightBarButtonItem" title="完了" id="Nrb-fo-Hvw"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mkD-U4-IsC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-983.20000000000005" y="109.29535232383809"/>
+        </scene>
         <!--View Controller2-->
         <scene sceneID="vj1-Dg-Yvs">
             <objects>
@@ -64,7 +92,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6bb-qD-hWt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-822" y="115"/>
+            <point key="canvasLocation" x="116" y="114.69265367316342"/>
         </scene>
         <!--Read View Controller-->
         <scene sceneID="vmH-68-Irq">
@@ -194,10 +222,10 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bVv-Mb-3HL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="297" y="115"/>
+            <point key="canvasLocation" x="1236" y="114.69265367316342"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Lnk-wV-dMh"/>
+        <segue reference="StD-Zh-Dvu"/>
     </inferredMetricsTieBreakers>
 </document>
