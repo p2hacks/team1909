@@ -17,26 +17,25 @@ class AddListViewController: UIViewController {
     
     
     @IBAction func ok() {
-        textFieldString = textField.text!
+//        textFieldString = textField.text!
         // SubViewController へ遷移するために Segue を呼び出す
-        performSegue(withIdentifier: "toViewController",sender: nil)
+        performSegue(withIdentifier: "toViewController2",sender: nil)
     }
     
     @IBAction func cancel() {
         // SubViewController へ遷移するために Segue を呼び出す
-        performSegue(withIdentifier: "toViewController",sender: nil)
+        performSegue(withIdentifier: "toViewController2",sender: nil)
     }
     
     // Segue 準備
     override func prepare(for segue: UIStoryboardSegue, sender: Any!) {
-        if (segue.identifier == "toViewController") {
-            let _: ViewController = (segue.destination as? ViewController)!
+        if (segue.identifier == "toViewController2") {
+            let _: ViewController2 = (segue.destination as? ViewController2)!
         }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        textField.placeholder = "ここに入力してくださいね"
         // Do any additional setup after loading the view.
     }
     
