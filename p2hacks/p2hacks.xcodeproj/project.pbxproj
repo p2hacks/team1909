@@ -14,6 +14,10 @@
 		F8847C36221165FB00150E96 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8847C34221165FB00150E96 /* LaunchScreen.storyboard */; };
 		F8847C41221165FB00150E96 /* p2hacksTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8847C40221165FB00150E96 /* p2hacksTests.swift */; };
 		F8847C4C221165FB00150E96 /* p2hacksUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8847C4B221165FB00150E96 /* p2hacksUITests.swift */; };
+		F8847C5A221512D900150E96 /* ProViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8847C59221512D900150E96 /* ProViewController.swift */; };
+		F8847C5C22151FC900150E96 /* QRReadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8847C5B22151FC900150E96 /* QRReadViewController.swift */; };
+		F8847C5E22152BCE00150E96 /* ViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8847C5D22152BCE00150E96 /* ViewController2.swift */; };
+		F8847C602215335D00150E96 /* AddListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8847C5F2215335D00150E96 /* AddListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +51,10 @@
 		F8847C47221165FB00150E96 /* p2hacksUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = p2hacksUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8847C4B221165FB00150E96 /* p2hacksUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = p2hacksUITests.swift; sourceTree = "<group>"; };
 		F8847C4D221165FB00150E96 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F8847C59221512D900150E96 /* ProViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProViewController.swift; sourceTree = "<group>"; };
+		F8847C5B22151FC900150E96 /* QRReadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRReadViewController.swift; sourceTree = "<group>"; };
+		F8847C5D22152BCE00150E96 /* ViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController2.swift; sourceTree = "<group>"; };
+		F8847C5F2215335D00150E96 /* AddListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +111,10 @@
 				F8847C32221165FB00150E96 /* Assets.xcassets */,
 				F8847C34221165FB00150E96 /* LaunchScreen.storyboard */,
 				F8847C37221165FB00150E96 /* Info.plist */,
+				F8847C59221512D900150E96 /* ProViewController.swift */,
+				F8847C5B22151FC900150E96 /* QRReadViewController.swift */,
+				F8847C5D22152BCE00150E96 /* ViewController2.swift */,
+				F8847C5F2215335D00150E96 /* AddListViewController.swift */,
 			);
 			path = p2hacks;
 			sourceTree = "<group>";
@@ -256,8 +268,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F8847C602215335D00150E96 /* AddListViewController.swift in Sources */,
+				F8847C5E22152BCE00150E96 /* ViewController2.swift in Sources */,
 				F8847C2E221165F800150E96 /* ViewController.swift in Sources */,
 				F8847C2C221165F800150E96 /* AppDelegate.swift in Sources */,
+				F8847C5A221512D900150E96 /* ProViewController.swift in Sources */,
+				F8847C5C22151FC900150E96 /* QRReadViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
