@@ -201,17 +201,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T4T-nr-weW">
-                                <rect key="frame" x="271" y="230" width="30" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="OK"/>
-                                <connections>
-                                    <action selector="ok" destination="nJV-fB-fnA" eventType="touchUpInside" id="kzu-Bs-cGZ"/>
-                                    <segue destination="OMh-jd-cO9" kind="presentation" identifier="toViewController" id="Lnk-wV-dMh"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y5f-en-TBY">
-                                <rect key="frame" x="79" y="230" width="77" height="30"/>
+                                <rect key="frame" x="65" y="418" width="77" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="キャンセル"/>
                                 <connections>
@@ -219,14 +210,33 @@
                                     <segue destination="OMh-jd-cO9" kind="presentation" identifier="toViewController2" id="EpX-bk-mbC"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="検索結果が表示されます" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YcG-ol-gvJ">
+                                <rect key="frame" x="79" y="323" width="200" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T4T-nr-weW">
+                                <rect key="frame" x="157" y="230" width="60" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="OK"/>
+                                <connections>
+                                    <action selector="ok" destination="nJV-fB-fnA" eventType="touchUpInside" id="kzu-Bs-cGZ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="v2N-n2-h0N"/>
                     </view>
+                    <connections>
+                        <outlet property="searchResult" destination="YcG-ol-gvJ" id="WTZ-SA-Wc0"/>
+                        <outlet property="textField" destination="2dV-Mh-hqJ" id="Yfx-ad-o9w"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mbS-v4-UKf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="297" y="-720"/>
+            <point key="canvasLocation" x="296.80000000000001" y="-720.08995502248877"/>
         </scene>
         <!--Pro View Controller-->
         <scene sceneID="INB-KQ-6Qc">
@@ -296,6 +306,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="StD-Zh-Dvu"/>
+        <segue reference="EpX-bk-mbC"/>
     </inferredMetricsTieBreakers>
 </document>
