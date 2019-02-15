@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double Pods_p2hacksTestsVersionNumber;
-FOUNDATION_EXPORT const unsigned char Pods_p2hacksTestsVersionString[];
+FOUNDATION_EXPORT double Pods_p2hacks_p2hacksTestsVersionNumber;
+FOUNDATION_EXPORT const unsigned char Pods_p2hacks_p2hacksTestsVersionString[];
 
