@@ -20,15 +20,18 @@ class ViewController2: UIViewController, UITableViewDelegate, UITableViewDataSou
         super.viewDidLoad()        
         // Do any additional setup after loading the view, typically from a nib.
         userDefaults.set(TODO, forKey: "TODOlist")
-
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         TODO = userDefaults.array(forKey: "TODOlist") as! [String]
+        if text.count > 0 {
         TODO.append(text)
         userDefaults.set(TODO, forKey: "TODOlist")
-        print("hoge",TODO)
+        }else{
+            
+        }
+//        print("hoge",TODO)
         tableView.reloadData()
 
     }
