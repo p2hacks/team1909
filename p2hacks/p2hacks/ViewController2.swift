@@ -10,6 +10,7 @@ import UIKit
 
 class ViewController2: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    @IBOutlet weak var tableView: UITableView!
     var TODO = ["運営"] //初期リスト
     var text = "" //遷移で得られるテキストを入れる変数
     
@@ -22,8 +23,12 @@ class ViewController2: UIViewController, UITableViewDelegate, UITableViewDataSou
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
+        TODO = userDefaults.array(forKey: "TODOlist") as! [String]
         TODO.append(text)
         userDefaults.set(TODO, forKey: "TODOlist")
+        print("hoge",TODO)
+        tableView.reloadData()
+
     }
     
     override func didReceiveMemoryWarning() {
@@ -59,28 +64,7 @@ class ViewController2: UIViewController, UITableViewDelegate, UITableViewDataSou
             //ProViewControllerへ選択された名前をテキストで渡す
             proViewController.text = self.text
         }
-        if segue.identifier == "tomyProViewController" {
-            let myproViewController = segue.destination as! myProViewController
-            myproViewController.text = self.text
-        }
     }
-    
-//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        return TODO.count
-//    }
-//
-//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        // セルを取得する
-//        let cell: UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-//        // セルに表示する値を設定する
-//        cell.textLabel!.text = TODO[indexPath.row]
-//        return cell
-//    }
-    
-//    override func viewwillAppear(_ animated: Bool) {
-//        TODO = UserDefaults.standard.stringArray(forKey: TODO)
-//    }
-    
 }
 
 
