@@ -62,10 +62,7 @@ class ViewController2: UIViewController, UITableViewDelegate, UITableViewDataSou
     // Segue 準備
     override func prepare(for segue: UIStoryboardSegue, sender: Any!) {
       
-        //ViewController2へ選択された名前をテキストで渡す
-         let next = segue.destination as! MyProSetViewController
-         let _ = next.uuid
-         next.uuid  = self.uuid
+       
         
         if (segue.identifier == "toQRReadViewController") {//QRReadViewControllerへ遷移する場合
             let _: QRReadViewController = (segue.destination as? QRReadViewController)!

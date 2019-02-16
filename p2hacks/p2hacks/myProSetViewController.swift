@@ -36,6 +36,7 @@ class MyProSetViewController: UIViewController ,UITextFieldDelegate{
         tellText.delegate = self
         mailText.delegate = self
         
+        
         let getName = DBRef.child(uuid+"/name/name")
         getName.observe(.value){(snap: DataSnapshot)in self.nameText.text = (snap.value! as AnyObject).description}
         let getBelong = DBRef.child(uuid+"/belong/belong")
@@ -48,6 +49,34 @@ class MyProSetViewController: UIViewController ,UITextFieldDelegate{
         imageView.layer.borderColor = UIColor.red.cgColor
         imageView.layer.borderWidth = 2.0
         
+        let data = uuid.data(using: String.Encoding.utf8)!
+        
+        //URLをNSDataに変換し、QRコードを作成します。
+        //Converts a url to NSData.
+        //let url = "http://swiswiswift.com"
+        //let data = url.data(using: String.Encoding.utf8)!
+        
+        //QRコードを生成します。
+        //Generate QR code.
+        let qr = CIFilter(name: "CIQRCodeGenerator", parameters: ["inputMessage": data, "inputCorrectionLevel": "M"])!
+        let sizeTransform = CGAffineTransform(scaleX: 10, y: 10)
+        let transTrans = CGAffineTransform(translationX: 50, y: -30)
+        let qrImage = qr.outputImage!.transformed(by: sizeTransform)
+        let context = CIContext()
+        let cgImage = context.createCGImage(qrImage, from: qrImage.extent)
+        let uiImage = UIImage(cgImage: cgImage!)
+        
+        //作成したQRコードを表示します
+        //Display QR code
+        let qrImageView = UIImageView()
+        qrImageView.contentMode = .scaleAspectFit
+        qrImageView.transform = sizeTransform
+        qrImageView.transform = transTrans
+        qrImageView.frame = self.view.frame
+        qrImageView.image = uiImage
+        self.view.addSubview(qrImageView)
+        
+    
     }
     
     @IBAction func myEdit(){
