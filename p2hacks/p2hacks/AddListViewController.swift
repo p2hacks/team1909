@@ -18,7 +18,7 @@ class AddListViewController: UIViewController {
     
     // 文字列保存用の変数
     var textFieldString = ""
-    var text = ""
+    var text = "" //検索して得られた名前を保存し遷移先へ渡す変数
     override func viewDidLoad() {
         super.viewDidLoad()
         DBRef = Database.database().reference()
@@ -32,23 +32,23 @@ class AddListViewController: UIViewController {
         text = textFieldString
         textFieldString = ""
         // SubViewController へ遷移するために Segue を呼び出す
-        //performSegue(withIdentifier: "toViewController2",sender: nil)
     }
     
     @IBAction func cancel() {
-        // SubViewController へ遷移するために Segue を呼び出す
+        // toViewController2 へ遷移するために Segue を呼び出す
         performSegue(withIdentifier: "toViewController2",sender: nil)
     }
     
     @IBAction func OK(){
+        // toViewController2 へ遷移するために Segue を呼び出す
         performSegue(withIdentifier: "toViewController2", sender: nil)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "toViewController2" { //ThirdViewControllerに遷移する場合
-            // ThirdViewControllerをインスタンス化
+        if segue.identifier == "toViewController2" { //ViewController2に遷移する場合
+            // ViewController2をインスタンス化
             let viewController2 = segue.destination as! ViewController2
-            // 値を渡す
+            // ViewController2に値を渡す
             viewController2.text = self.text
             
         }
