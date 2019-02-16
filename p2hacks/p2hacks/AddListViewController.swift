@@ -19,6 +19,8 @@ class AddListViewController: UIViewController {
     // 文字列保存用の変数
     var textFieldString = ""
     var text = "" //検索して得られた名前を保存し遷移先へ渡す変数
+    let uuid = "" //初期画面で得られたID
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         DBRef = Database.database().reference()

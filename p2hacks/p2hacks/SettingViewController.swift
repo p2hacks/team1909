@@ -15,29 +15,41 @@ class SettingViewController: UIViewController ,UITextFieldDelegate{
     @IBOutlet weak var belongField: UITextField!
     @IBOutlet weak var mailField: UITextField!
     @IBOutlet weak var tellField: UITextField!
+    @IBOutlet weak var idLabel: UILabel!
     
     var DBRef:DatabaseReference!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-   DBRef = Database.database().reference()
+     DBRef = Database.database().reference()
         // Do any additional setup after loading the view.
         nameField.delegate = self
         belongField.delegate = self
         tellField.delegate = self
         mailField.delegate = self
-
-    }
+        
+       
+  //  override func viewWillAppear(_ animated: Bool) {
+  //      super.viewWillAppear(true)
+  //      }
+   }
     
     @IBAction func idregister(_ sender: Any) {
+       
+        
+        let uuid = NSUUID().uuidString
+        
+        print("かめはめ波"+uuid)
+        
         let dataName = ["name":nameField.text!]
         let dataBelong = ["belong":belongField.text!]
         let dataMail = ["mail":mailField.text!]
         let dataTell = ["tell":tellField.text!]
-        DBRef.child(String(nameField.text!)+"/name").setValue(dataName)
-        DBRef.child(String(nameField.text!)+"/belong").setValue(dataBelong)
-        DBRef.child(String(nameField.text!)+"/mail").setValue(dataMail)
-        DBRef.child(String(nameField.text!)+"/tell").setValue(dataTell)
+       
+        DBRef.child(uuid+"/name").setValue(dataName)
+        DBRef.child(uuid+"/belong").setValue(dataBelong)
+        DBRef.child(uuid+"/mail").setValue(dataMail)
+        DBRef.child(uuid+"/tell").setValue(dataTell)
         
     }
     

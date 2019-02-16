@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class MyProSetViewController: UIViewController ,UITextFieldDelegate{
     @IBOutlet var compButton: UIButton!
@@ -17,10 +18,11 @@ class MyProSetViewController: UIViewController ,UITextFieldDelegate{
     @IBOutlet var backButton: UIButton!
     @IBOutlet weak var imageView: UIView!
     @IBOutlet var Button: UIButton!
-
+    var DBRef:DatabaseReference!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        DBRef = Database.database().reference()
         compButton.isHidden = true
         nameText.isEnabled = false
         belongText.isEnabled = false
@@ -31,6 +33,7 @@ class MyProSetViewController: UIViewController ,UITextFieldDelegate{
         belongText.delegate = self
         tellText.delegate = self
         mailText.delegate = self
+        
         
         imageView.layer.borderColor = UIColor.red.cgColor
         imageView.layer.borderWidth = 2.0
@@ -45,7 +48,16 @@ class MyProSetViewController: UIViewController ,UITextFieldDelegate{
         mailText.isEnabled = true
         backButton.isEnabled = false
     }
+    
     @IBAction func comp(){
+        let dataName = ["name":nameText.text!]
+        let dataBelong = ["belong":belongText.text!]
+        let dataMail = ["mail":mailText.text!]
+        let dataTell = ["tell":tellText.text!]
+        DBRef.child(String(nameText.text!)+"/name").setValue(dataName)
+        DBRef.child(String(nameText.text!)+"/belong").setValue(dataBelong)
+        DBRef.child(String(nameText.text!)+"/mail").setValue(dataMail)
+        DBRef.child(String(nameText.text!)+"/tell").setValue(dataTell)
         compButton.isHidden = true
         nameText.isEnabled = false
         belongText.isEnabled = false
