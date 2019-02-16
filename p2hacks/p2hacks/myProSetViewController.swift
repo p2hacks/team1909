@@ -15,6 +15,9 @@ class MyProSetViewController: UIViewController ,UITextFieldDelegate{
     @IBOutlet var tellText:UITextField!
     @IBOutlet var mailText:UITextField!
     @IBOutlet var backButton: UIButton!
+    @IBOutlet weak var imageView: UIView!
+    @IBOutlet var Button: UIButton!
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,7 +30,12 @@ class MyProSetViewController: UIViewController ,UITextFieldDelegate{
         nameText.delegate = self 
         belongText.delegate = self
         tellText.delegate = self
-        mailText.delegate = self    }
+        mailText.delegate = self
+        
+        imageView.layer.borderColor = UIColor.red.cgColor
+        imageView.layer.borderWidth = 2.0
+        
+    }
     
     @IBAction func myEdit(){
         compButton.isHidden = false

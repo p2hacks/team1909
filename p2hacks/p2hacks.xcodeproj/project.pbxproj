@@ -13,9 +13,10 @@
 		8C36AEF52216DC7100902556 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C36AEF42216DC7100902556 /* SettingViewController.swift */; };
 		9C773AC7221843DD009F8484 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C773AC6221843DD009F8484 /* CameraViewController.swift */; };
 		9C773AC9221843FF009F8484 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9C773AC8221843FF009F8484 /* GoogleService-Info.plist */; };
+		9C773ACB221844CF009F8484 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C773ACA221844CF009F8484 /* Main.storyboard */; };
+		9C773ACD2218457F009F8484 /* myProSetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C773ACC2218457E009F8484 /* myProSetViewController.swift */; };
 		E289A6D4D6DBC8F565F3EDF3 /* Pods_p2hacks_p2hacksTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E376693859B0638DF66F819 /* Pods_p2hacks_p2hacksTests.framework */; };
 		F8847C2C221165F800150E96 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8847C2B221165F800150E96 /* AppDelegate.swift */; };
-		F8847C31221165F800150E96 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8847C2F221165F800150E96 /* Main.storyboard */; };
 		F8847C33221165FB00150E96 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8847C32221165FB00150E96 /* Assets.xcassets */; };
 		F8847C36221165FB00150E96 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8847C34221165FB00150E96 /* LaunchScreen.storyboard */; };
 		F8847C41221165FB00150E96 /* p2hacksTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8847C40221165FB00150E96 /* p2hacksTests.swift */; };
@@ -58,10 +59,11 @@
 		930CD14309A3B2E6A97452DA /* libPods-p2hacksUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-p2hacksUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C773AC6221843DD009F8484 /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		9C773AC8221843FF009F8484 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../GoogleService-Info.plist"; sourceTree = "<group>"; };
+		9C773ACA221844CF009F8484 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		9C773ACC2218457E009F8484 /* myProSetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = myProSetViewController.swift; sourceTree = "<group>"; };
 		E546F73FAA102B877D9CB20C /* Pods_p2hacksTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_p2hacksTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8847C28221165F800150E96 /* p2hacks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = p2hacks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8847C2B221165F800150E96 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F8847C30221165F800150E96 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F8847C32221165FB00150E96 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F8847C35221165FB00150E96 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F8847C37221165FB00150E96 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -159,8 +161,9 @@
 			children = (
 				9C773AC6221843DD009F8484 /* CameraViewController.swift */,
 				F8847C2B221165F800150E96 /* AppDelegate.swift */,
-				F8847C2F221165F800150E96 /* Main.storyboard */,
+				9C773ACA221844CF009F8484 /* Main.storyboard */,
 				8C36AEF42216DC7100902556 /* SettingViewController.swift */,
+				9C773ACC2218457E009F8484 /* myProSetViewController.swift */,
 				F8847C32221165FB00150E96 /* Assets.xcassets */,
 				F8847C34221165FB00150E96 /* LaunchScreen.storyboard */,
 				F8847C37221165FB00150E96 /* Info.plist */,
@@ -301,9 +304,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				F8847C36221165FB00150E96 /* LaunchScreen.storyboard in Resources */,
+				9C773ACB221844CF009F8484 /* Main.storyboard in Resources */,
 				9C773AC9221843FF009F8484 /* GoogleService-Info.plist in Resources */,
 				F8847C33221165FB00150E96 /* Assets.xcassets in Resources */,
-				F8847C31221165F800150E96 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -450,6 +453,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F8847C602215335D00150E96 /* AddListViewController.swift in Sources */,
+				9C773ACD2218457F009F8484 /* myProSetViewController.swift in Sources */,
 				F8847C5E22152BCE00150E96 /* ViewController2.swift in Sources */,
 				F8847C2C221165F800150E96 /* AppDelegate.swift in Sources */,
 				F8847C5A221512D900150E96 /* ProViewController.swift in Sources */,
@@ -491,14 +495,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		F8847C2F221165F800150E96 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F8847C30221165F800150E96 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		F8847C34221165FB00150E96 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
