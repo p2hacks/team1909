@@ -10,16 +10,13 @@ import UIKit
 
 class ViewController2: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    var TODO = ["運営"]
-    var text = ""
+    var TODO = ["運営"] //初期リスト
+    var text = "" //遷移で得られるテキストを入れる変数
     
     var userDefaults = UserDefaults.standard
     
     override func viewDidLoad() {
-        super.viewDidLoad()
-        
-//        TODO.append(text)
-        
+        super.viewDidLoad()        
         // Do any additional setup after loading the view, typically from a nib.
     }
     
@@ -53,14 +50,15 @@ class ViewController2: UIViewController, UITableViewDelegate, UITableViewDataSou
 //    let getMaxSpeed:[Double] = userDefaults.array(forKey: "udMaxSpeed") as! [Double]
     // Segue 準備
     override func prepare(for segue: UIStoryboardSegue, sender: Any!) {
-        if (segue.identifier == "toViewController") {
+        if (segue.identifier == "toViewController") {//ViewControllerへ遷移する場合
             let _: ViewController = (segue.destination as? ViewController)!
         }
-        if (segue.identifier == "toQRReadViewController") {
+        if (segue.identifier == "toQRReadViewController") {//QRReadViewControllerへ遷移する場合
             let _: QRReadViewController = (segue.destination as? QRReadViewController)!
         }
-        if segue.identifier == "toProViewController" {
+        if segue.identifier == "toProViewController" {//ProViewControllerへ遷移する場合
             let proViewController = segue.destination as! ProViewController
+            //ProViewControllerへ選択された名前をテキストで渡す
             proViewController.text = self.text
         }
         if segue.identifier == "tomyProViewController" {

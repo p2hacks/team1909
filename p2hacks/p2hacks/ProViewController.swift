@@ -13,7 +13,7 @@ class ProViewController: UIViewController {
     @IBOutlet var tellLabel:UILabel!
     @IBOutlet var mailLabel:UILabel!
     
-    var text = ""
+    var text = "" //遷移で送られてきた値の保存用の変数
     var nameText = ""
     
     override func viewDidLoad() {
