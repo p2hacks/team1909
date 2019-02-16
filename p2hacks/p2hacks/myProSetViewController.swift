@@ -19,6 +19,8 @@ class MyProSetViewController: UIViewController ,UITextFieldDelegate{
     @IBOutlet weak var imageView: UIView!
     @IBOutlet var Button: UIButton!
     var DBRef:DatabaseReference!
+    var uuid: String! = UserDefaults.standard.string(forKey: "uuid")
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,6 +36,14 @@ class MyProSetViewController: UIViewController ,UITextFieldDelegate{
         tellText.delegate = self
         mailText.delegate = self
         
+        let getName = DBRef.child(uuid+"/name/name")
+        getName.observe(.value){(snap: DataSnapshot)in self.nameText.text = (snap.value! as AnyObject).description}
+        let getBelong = DBRef.child(uuid+"/belong/belong")
+        getBelong.observe(.value){(snap: DataSnapshot)in self.belongText.text = (snap.value! as AnyObject).description}
+        let getMail = DBRef.child(uuid+"/mail/mail")
+        getMail.observe(.value){(snap: DataSnapshot)in self.mailText.text = (snap.value! as AnyObject).description}
+        let getTell = DBRef.child(uuid+"/tell/tell")
+        getTell.observe(.value){(snap: DataSnapshot)in self.tellText.text = (snap.value! as AnyObject).description}
         
         imageView.layer.borderColor = UIColor.red.cgColor
         imageView.layer.borderWidth = 2.0
@@ -54,10 +64,10 @@ class MyProSetViewController: UIViewController ,UITextFieldDelegate{
         let dataBelong = ["belong":belongText.text!]
         let dataMail = ["mail":mailText.text!]
         let dataTell = ["tell":tellText.text!]
-        DBRef.child(String(nameText.text!)+"/name").setValue(dataName)
-        DBRef.child(String(nameText.text!)+"/belong").setValue(dataBelong)
-        DBRef.child(String(nameText.text!)+"/mail").setValue(dataMail)
-        DBRef.child(String(nameText.text!)+"/tell").setValue(dataTell)
+        DBRef.child(uuid+"/name").setValue(dataName)
+        DBRef.child(uuid+"/belong").setValue(dataBelong)
+        DBRef.child(uuid+"/mail").setValue(dataMail)
+        DBRef.child(uuid+"/tell").setValue(dataTell)
         compButton.isHidden = true
         nameText.isEnabled = false
         belongText.isEnabled = false

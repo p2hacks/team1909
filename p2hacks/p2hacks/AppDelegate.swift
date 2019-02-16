@@ -23,7 +23,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             
             UserDefaults.standard.set(false, forKey: "launchedBefore")
             
-            
         } else {
             
             UserDefaults.standard.set(true, forKey: "launchedBefore")

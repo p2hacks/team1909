@@ -19,6 +19,9 @@ class SettingViewController: UIViewController ,UITextFieldDelegate{
     
     var DBRef:DatabaseReference!
     
+    let uuid = NSUUID().uuidString // IDを生成
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
      DBRef = Database.database().reference()
@@ -35,11 +38,6 @@ class SettingViewController: UIViewController ,UITextFieldDelegate{
    }
     
     @IBAction func idregister(_ sender: Any) {
-       
-        
-        let uuid = NSUUID().uuidString
-        
-        print("かめはめ波"+uuid)
         
         let dataName = ["name":nameField.text!]
         let dataBelong = ["belong":belongField.text!]
@@ -50,7 +48,8 @@ class SettingViewController: UIViewController ,UITextFieldDelegate{
         DBRef.child(uuid+"/belong").setValue(dataBelong)
         DBRef.child(uuid+"/mail").setValue(dataMail)
         DBRef.child(uuid+"/tell").setValue(dataTell)
-        
+    
+        UserDefaults.standard.set(uuid, forKey: "uuid")
     }
     
     override func didReceiveMemoryWarning() {
@@ -71,5 +70,11 @@ class SettingViewController: UIViewController ,UITextFieldDelegate{
         // Pass the selected object to the new view controller.
     }
     */
-
+    override func prepare(for segue: UIStoryboardSegue, sender: Any!) {
+            let next = segue.destination as! ViewController2
+            //ViewController2へ選択された名前をテキストで渡す
+        let _ = next.view
+           next.uuid  = self.uuid
+        }
 }
+

@@ -13,8 +13,9 @@ class ViewController2: UIViewController, UITableViewDelegate, UITableViewDataSou
     @IBOutlet weak var tableView: UITableView!
     var TODO = ["運営"] //初期リスト
     var text = "" //遷移で得られるテキストを入れる変数
-    
+   
     var userDefaults = UserDefaults.standard
+    var uuid: String! = UserDefaults.standard.string(forKey: "uuid")
     
     override func viewDidLoad() {
         super.viewDidLoad()        
@@ -61,6 +62,11 @@ class ViewController2: UIViewController, UITableViewDelegate, UITableViewDataSou
     // Segue 準備
     override func prepare(for segue: UIStoryboardSegue, sender: Any!) {
       
+        //ViewController2へ選択された名前をテキストで渡す
+         let next = segue.destination as! MyProSetViewController
+         let _ = next.uuid
+         next.uuid  = self.uuid
+        
         if (segue.identifier == "toQRReadViewController") {//QRReadViewControllerへ遷移する場合
             let _: QRReadViewController = (segue.destination as? QRReadViewController)!
         }
