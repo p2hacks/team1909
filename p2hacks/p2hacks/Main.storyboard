@@ -211,14 +211,23 @@
                                     <action selector="comp" destination="9KW-pX-pzt" eventType="touchUpInside" id="nb6-eb-K4C"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fWJ-To-I5y">
+                                <rect key="frame" x="16" y="92" width="129" height="129"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <segue destination="8Lx-kb-Xbi" kind="presentation" id="cL9-0X-2rF"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="DQL-NB-Fpi"/>
                     </view>
                     <connections>
+                        <outlet property="Button" destination="fWJ-To-I5y" id="j6G-6T-tpl"/>
                         <outlet property="backButton" destination="d6i-WL-zPH" id="2Pp-TR-DrY"/>
                         <outlet property="belongText" destination="CFq-Cy-aj9" id="A5F-Qd-YwA"/>
                         <outlet property="compButton" destination="lwY-S5-Jh0" id="8AD-0a-MeA"/>
+                        <outlet property="imageView" destination="8yu-3g-4Lh" id="2nY-AJ-hvc"/>
                         <outlet property="mailText" destination="0EJ-oL-svr" id="YMP-5W-0xA"/>
                         <outlet property="nameText" destination="iGn-cE-iAj" id="bOa-Rs-ipN"/>
                         <outlet property="tellText" destination="Ho3-4q-TRn" id="kgf-6W-YBu"/>
@@ -227,6 +236,72 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I7c-QK-cAl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-423.19999999999999" y="-761.46926536731644"/>
+        </scene>
+        <!--Camera View Controller-->
+        <scene sceneID="1wR-Nv-cYC">
+            <objects>
+                <viewController id="8Lx-kb-Xbi" customClass="CameraViewController" customModule="p2hacks" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WcJ-pE-qSb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vyt-jQ-HmE" userLabel="imageView">
+                                <rect key="frame" x="67" y="97" width="240" height="240"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RfN-1v-HjV">
+                                <rect key="frame" x="67" y="419" width="240" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GpD-T7-hvZ">
+                                <rect key="frame" x="205" y="448" width="110" height="74"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="アルバム"/>
+                                <connections>
+                                    <action selector="album:" destination="8Lx-kb-Xbi" eventType="touchUpInside" id="PM1-pg-oMw"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W51-OC-kkd">
+                                <rect key="frame" x="172" y="555" width="31" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="決定"/>
+                                <connections>
+                                    <action selector="Select:" destination="8Lx-kb-Xbi" eventType="touchUpInside" id="ReO-Dm-Ae3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="78L-UP-G6b">
+                                <rect key="frame" x="308" y="38" width="31" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="戻る"/>
+                                <connections>
+                                    <segue destination="9KW-pX-pzt" kind="presentation" id="Eoy-fH-B4q"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ss4-Bs-Op5">
+                                <rect key="frame" x="67" y="448" width="118" height="74"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="カメラ"/>
+                                <connections>
+                                    <action selector="camera" destination="8Lx-kb-Xbi" eventType="touchUpInside" id="zTb-wa-37P"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="Apg-C6-9a0"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="vyt-jQ-HmE" id="9j2-SL-5di"/>
+                        <outlet property="label" destination="RfN-1v-HjV" id="cUA-dd-gNX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hwq-3k-sT4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="472.80000000000001" y="-761.46926536731644"/>
         </scene>
         <!--View Controller2-->
         <scene sceneID="vj1-Dg-Yvs">
@@ -263,34 +338,22 @@
                                     <outlet property="delegate" destination="OMh-jd-cO9" id="1NF-Wy-TMM"/>
                                 </connections>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="izn-St-Qd9">
-                                <rect key="frame" x="0.0" y="81" width="115" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                <state key="normal" title="友達を追加"/>
-                                <connections>
-                                    <segue destination="nJV-fB-fnA" kind="presentation" identifier="toAddListViewContoroller" id="rmr-CH-Bch"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uBF-Df-zL0">
-                                <rect key="frame" x="122" y="85" width="150" height="37"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="友達をブロック"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WMn-Hj-EwW">
-                                <rect key="frame" x="292" y="84" width="83" height="37"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="ソート"/>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y5P-AS-KFl">
                                 <rect key="frame" x="98" y="25" width="178" height="52"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <state key="normal" title="プロフィール設定"/>
                                 <connections>
-                                    <segue destination="9KW-pX-pzt" kind="showDetail" id="PBV-5C-wGf"/>
+                                    <segue destination="9KW-pX-pzt" kind="presentation" id="4WQ-XS-m6r"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="izn-St-Qd9">
+                                <rect key="frame" x="130" y="81" width="115" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <state key="normal" title="友達を追加"/>
+                                <connections>
+                                    <segue destination="nJV-fB-fnA" kind="presentation" identifier="toAddListViewContoroller" id="rmr-CH-Bch"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -486,6 +549,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="bOi-Dl-9c7"/>
+        <segue reference="cL9-0X-2rF"/>
+        <segue reference="NRE-Vi-XCr"/>
+        <segue reference="Eoy-fH-B4q"/>
     </inferredMetricsTieBreakers>
 </document>
