@@ -10,10 +10,13 @@ import UIKit
 
 class ViewController2: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    var TODO = ["大学","サークル","バイト"]
-  
+    var TODO = ["運営"]
+    var text = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        TODO.append(text)
         
         // Do any additional setup after loading the view, typically from a nib.
     }
@@ -24,7 +27,8 @@ class ViewController2: UIViewController, UITableViewDelegate, UITableViewDataSou
     
     func tableView(_ table: UITableView,didSelectRowAt indexPath: IndexPath) {
         // SubViewController へ遷移するために Segue を呼び出す
-        performSegue(withIdentifier: "toViewController",sender: nil)
+        
+        performSegue(withIdentifier: "toProViewController",sender: nil)
     }
     
     
@@ -35,6 +39,10 @@ class ViewController2: UIViewController, UITableViewDelegate, UITableViewDataSou
         }
         if (segue.identifier == "toQRReadViewController") {
             let _: QRReadViewController = (segue.destination as? QRReadViewController)!
+        }
+        if segue.identifier == "toProViewController" {
+            let proViewController = segue.destination as! ProViewController
+            proViewController.text = self.text
         }
     }
     
