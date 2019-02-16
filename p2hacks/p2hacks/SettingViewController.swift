@@ -10,7 +10,7 @@ import UIKit
 import FirebaseDatabase
 import FirebaseCore
 
-class SettingViewController: UIViewController {
+class SettingViewController: UIViewController ,UITextFieldDelegate{
     @IBOutlet weak var nameField: UITextField!
     @IBOutlet weak var belongField: UITextField!
     @IBOutlet weak var mailField: UITextField!
@@ -22,6 +22,11 @@ class SettingViewController: UIViewController {
         super.viewDidLoad()
    DBRef = Database.database().reference()
         // Do any additional setup after loading the view.
+        nameField.delegate = self
+        belongField.delegate = self
+        tellField.delegate = self
+        mailField.delegate = self
+
     }
     
     @IBAction func idregister(_ sender: Any) {
@@ -36,6 +41,15 @@ class SettingViewController: UIViewController {
         
     }
     
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        // キーボードを閉じる
+        textField.resignFirstResponder()
+        
+        return true
+    }
     /*
     // MARK: - Navigation
 

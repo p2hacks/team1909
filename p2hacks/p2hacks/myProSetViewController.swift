@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MyProSetViewController: UIViewController {
+class MyProSetViewController: UIViewController ,UITextFieldDelegate{
     @IBOutlet var compButton: UIButton!
     @IBOutlet var nameText:UITextField!
     @IBOutlet var belongText:UITextField!
@@ -24,7 +24,10 @@ class MyProSetViewController: UIViewController {
         tellText.isEnabled = false
         mailText.isEnabled = false
         backButton.isEnabled = true
-    }
+        nameText.delegate = self 
+        belongText.delegate = self
+        tellText.delegate = self
+        mailText.delegate = self    }
     
     @IBAction func myEdit(){
         compButton.isHidden = false
@@ -40,19 +43,17 @@ class MyProSetViewController: UIViewController {
         belongText.isEnabled = false
         tellText.isEnabled = false
         mailText.isEnabled = false
-         backButton.isEnabled = true
+        backButton.isEnabled = true
+    }
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        // キーボードを閉じる
+        textField.resignFirstResponder()
+        
+        return true
     }
     
-    
-    
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
-     */
     
 }
