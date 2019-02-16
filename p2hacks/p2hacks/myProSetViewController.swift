@@ -41,7 +41,6 @@ class MyProSetViewController: UIViewController {
         tellText.isEnabled = false
         mailText.isEnabled = false
          backButton.isEnabled = true
-        
     }
     
     
