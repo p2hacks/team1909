@@ -199,7 +199,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eaR-mt-91r">
-                                <rect key="frame" x="104" y="488" width="159" height="159"/>
+                                <rect key="frame" x="104" y="488" width="150" height="150"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d6i-WL-zPH">
@@ -564,7 +564,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="EpX-bk-mbC"/>
+        <segue reference="cL9-0X-2rF"/>
+        <segue reference="NRE-Vi-XCr"/>
         <segue reference="Eoy-fH-B4q"/>
     </inferredMetricsTieBreakers>
 </document>
