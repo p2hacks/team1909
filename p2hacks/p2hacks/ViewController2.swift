@@ -19,6 +19,8 @@ class ViewController2: UIViewController, UITableViewDelegate, UITableViewDataSou
     override func viewDidLoad() {
         super.viewDidLoad()        
         // Do any additional setup after loading the view, typically from a nib.
+        userDefaults.set(TODO, forKey: "TODOlist")
+
     }
     
     override func viewWillAppear(_ animated: Bool) {
