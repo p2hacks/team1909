@@ -10,12 +10,12 @@ import UIKit
 
 class ViewController2: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    var TODO = ["運営"]
-    var text = ""
+    var TODO = ["運営"] //初期リスト
+    var text = "" //遷移で得られるテキストを入れる変数
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        //TODO配列に新たな名前を追加
         TODO.append(text)
         
         // Do any additional setup after loading the view, typically from a nib.
@@ -26,22 +26,20 @@ class ViewController2: UIViewController, UITableViewDelegate, UITableViewDataSou
     }
     
     func tableView(_ table: UITableView,didSelectRowAt indexPath: IndexPath) {
-        // SubViewController へ遷移するために Segue を呼び出す
-        
+        // ProViewController へ遷移するために Segue を呼び出す
         performSegue(withIdentifier: "toProViewController",sender: nil)
     }
     
     
     // Segue 準備
     override func prepare(for segue: UIStoryboardSegue, sender: Any!) {
-        if (segue.identifier == "toViewController") {
-            let _: ViewController = (segue.destination as? ViewController)!
-        }
-        if (segue.identifier == "toQRReadViewController") {
+      
+        if (segue.identifier == "toQRReadViewController") {//QRReadViewControllerへ遷移する場合
             let _: QRReadViewController = (segue.destination as? QRReadViewController)!
         }
-        if segue.identifier == "toProViewController" {
+        if segue.identifier == "toProViewController" {//ProViewControllerへ遷移する場合
             let proViewController = segue.destination as! ProViewController
+            //ProViewControllerへ選択された名前をテキストで渡す
             proViewController.text = self.text
         }
     }
