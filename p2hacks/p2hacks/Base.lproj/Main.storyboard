@@ -13,7 +13,7 @@
         <!--Setting View Controller-->
         <scene sceneID="e8Y-Dc-v5d">
             <objects>
-                <viewController id="C3u-PP-xOE" customClass="SettingViewController" customModule="p2hacks" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="syokisetting" id="C3u-PP-xOE" customClass="SettingViewController" customModule="p2hacks" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Cgm-c4-YlK">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -82,12 +82,12 @@
                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4qi-3A-Zxi">
-                                <rect key="frame" x="115" y="551" width="144" height="30"/>
+                                <rect key="frame" x="115" y="544" width="144" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="完了"/>
                                 <connections>
-                                    <action selector="idregister:" destination="C3u-PP-xOE" eventType="touchUpInside" id="udX-WI-jog"/>
-                                    <segue destination="OMh-jd-cO9" kind="presentation" id="StD-Zh-Dvu"/>
+                                    <action selector="idregister:" destination="C3u-PP-xOE" eventType="touchUpInside" id="TWB-Fn-FjT"/>
+                                    <segue destination="OMh-jd-cO9" kind="showDetail" id="bOi-Dl-9c7"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -111,7 +111,7 @@
         <!--View Controller2-->
         <scene sceneID="vj1-Dg-Yvs">
             <objects>
-                <viewController id="OMh-jd-cO9" customClass="ViewController2" customModule="p2hacks" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ristsetting" id="OMh-jd-cO9" customClass="ViewController2" customModule="p2hacks" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6ob-uH-Hk8">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -336,6 +336,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="StD-Zh-Dvu"/>
+        <segue reference="bOi-Dl-9c7"/>
     </inferredMetricsTieBreakers>
 </document>
