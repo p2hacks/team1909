@@ -33,6 +33,7 @@ class SettingViewController: UIViewController {
         DBRef.child(String(nameField.text!)+"/belong").setValue(dataBelong)
         DBRef.child(String(nameField.text!)+"/mail").setValue(dataMail)
         DBRef.child(String(nameField.text!)+"/tell").setValue(dataTell)
+        
     }
     
     /*
