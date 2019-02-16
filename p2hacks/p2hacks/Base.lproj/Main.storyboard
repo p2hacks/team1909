@@ -99,6 +99,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="belongField" destination="bRI-O1-GPF" id="JSx-kP-z9k"/>
+                        <outlet property="compButton" destination="4qi-3A-Zxi" id="efO-kW-yKm"/>
                         <outlet property="mailField" destination="IjX-mV-bzt" id="R38-mM-yXS"/>
                         <outlet property="nameField" destination="MsF-yO-HPH" id="qdp-4i-2Zs"/>
                         <outlet property="tellField" destination="Xwa-Bh-Tg7" id="SIB-H2-oES"/>
@@ -147,7 +148,7 @@
                                 <rect key="frame" x="0.0" y="20" width="375" height="59"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <state key="normal" title="リストを追加"/>
+                                <state key="normal" title="友達を追加"/>
                                 <connections>
                                     <segue destination="nJV-fB-fnA" kind="presentation" identifier="toAddListViewContoroller" id="rmr-CH-Bch"/>
                                 </connections>
@@ -157,7 +158,7 @@
                         <viewLayoutGuide key="safeArea" id="35v-ts-nLU"/>
                     </view>
                     <connections>
-                        <segue destination="XCc-Ea-TPI" kind="presentation" id="wnV-aq-jZm"/>
+                        <segue destination="XCc-Ea-TPI" kind="presentation" identifier="toProViewController" id="V9i-Og-a74"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6bb-qD-hWt" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -225,6 +226,15 @@
                                     <action selector="ok" destination="nJV-fB-fnA" eventType="touchUpInside" id="kzu-Bs-cGZ"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Th-P1-ERz">
+                                <rect key="frame" x="268" y="418" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="OK"/>
+                                <connections>
+                                    <action selector="OK" destination="nJV-fB-fnA" eventType="touchUpInside" id="2Hd-dd-7qJ"/>
+                                    <segue destination="OMh-jd-cO9" kind="presentation" identifier="toViewController2" id="4yV-na-tdB"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="v2N-n2-h0N"/>
@@ -236,7 +246,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mbS-v4-UKf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="296.80000000000001" y="-720.08995502248877"/>
+            <point key="canvasLocation" x="1236" y="-744"/>
         </scene>
         <!--Pro View Controller-->
         <scene sceneID="INB-KQ-6Qc">
@@ -271,14 +281,6 @@
                                 <rect key="frame" x="62" y="379" width="240" height="240"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d8Z-OP-8AW">
-                                <rect key="frame" x="159" y="334" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <action selector="QR" destination="XCc-Ea-TPI" eventType="touchUpInside" id="iMd-mF-suq"/>
-                                </connections>
-                            </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5eu-JC-P3d">
                                 <rect key="frame" x="31" y="34" width="119" height="119"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -287,6 +289,9 @@
                                 <rect key="frame" x="317" y="20" width="42" height="42"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="戻る"/>
+                                <connections>
+                                    <segue destination="OMh-jd-cO9" kind="presentation" id="xRb-aG-VCz"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="名前:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mDl-7L-SD3">
                                 <rect key="frame" x="169" y="98" width="169" height="55"/>
@@ -299,6 +304,12 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="vZO-ne-paw"/>
                     </view>
+                    <connections>
+                        <outlet property="belongLabel" destination="P2x-TH-0dg" id="jaI-2f-SX2"/>
+                        <outlet property="mailLabel" destination="STI-Cu-iMI" id="6ab-TQ-UoZ"/>
+                        <outlet property="nameLabel" destination="mDl-7L-SD3" id="SgA-2g-bsI"/>
+                        <outlet property="tellLabel" destination="UuS-8y-Sfv" id="2hT-Vw-1xk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bVv-Mb-3HL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -306,6 +317,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="EpX-bk-mbC"/>
+        <segue reference="xRb-aG-VCz"/>
     </inferredMetricsTieBreakers>
 </document>
