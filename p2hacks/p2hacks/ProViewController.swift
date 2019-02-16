@@ -7,23 +7,36 @@
 //
 
 import UIKit
+import FirebaseDatabase
+import FirebaseCore
+
 class ProViewController: UIViewController {
-    @IBOutlet var nameLabel:UILabel!
-    @IBOutlet var belongLabel:UILabel!
-    @IBOutlet var tellLabel:UILabel!
-    @IBOutlet var mailLabel:UILabel!
+  
+   
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var belongLabel: UILabel!
+    @IBOutlet weak var mailLabel: UILabel!
+    @IBOutlet weak var tellLabel: UILabel!
+    
+    var DBRef:DatabaseReference!
     
     var text = "" //遷移で送られてきた値の保存用の変数
     var nameText = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        DBRef = Database.database().reference()
         nameText = text
         // Do any additional setup after loading the view.
+        let getName = DBRef.child(String(nameText)+"/name/name")
+        getName.observe(.value){(snap: DataSnapshot)in self.nameLabel.text = (snap.value! as AnyObject).description}
+        let getBelong = DBRef.child(String(nameText)+"/belong/belong")
+        getBelong.observe(.value){(snap: DataSnapshot)in self.belongLabel.text = (snap.value! as AnyObject).description}
+        let getMail = DBRef.child(String(nameText)+"/mail/mail")
+        getMail.observe(.value){(snap: DataSnapshot)in self.mailLabel.text = (snap.value! as AnyObject).description}
+        let getTell = DBRef.child(String(nameText)+"/tell/tell")
+        getTell.observe(.value){(snap: DataSnapshot)in self.tellLabel.text = (snap.value! as AnyObject).description}
     }
-    
-    
     /*
      // MARK: - Navigation
      

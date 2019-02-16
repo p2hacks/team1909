@@ -33,9 +33,7 @@ class ViewController2: UIViewController, UITableViewDelegate, UITableViewDataSou
     
     // Segue 準備
     override func prepare(for segue: UIStoryboardSegue, sender: Any!) {
-        if (segue.identifier == "toViewController") {//ViewControllerへ遷移する場合
-            let _: ViewController = (segue.destination as? ViewController)!
-        }
+      
         if (segue.identifier == "toQRReadViewController") {//QRReadViewControllerへ遷移する場合
             let _: QRReadViewController = (segue.destination as? QRReadViewController)!
         }

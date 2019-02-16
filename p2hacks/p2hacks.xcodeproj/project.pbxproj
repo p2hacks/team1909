@@ -14,7 +14,6 @@
 		8C36AEF52216DC7100902556 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C36AEF42216DC7100902556 /* SettingViewController.swift */; };
 		E289A6D4D6DBC8F565F3EDF3 /* Pods_p2hacks_p2hacksTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E376693859B0638DF66F819 /* Pods_p2hacks_p2hacksTests.framework */; };
 		F8847C2C221165F800150E96 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8847C2B221165F800150E96 /* AppDelegate.swift */; };
-		F8847C2E221165F800150E96 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8847C2D221165F800150E96 /* ViewController.swift */; };
 		F8847C31221165F800150E96 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8847C2F221165F800150E96 /* Main.storyboard */; };
 		F8847C33221165FB00150E96 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8847C32221165FB00150E96 /* Assets.xcassets */; };
 		F8847C36221165FB00150E96 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8847C34221165FB00150E96 /* LaunchScreen.storyboard */; };
@@ -60,7 +59,6 @@
 		E546F73FAA102B877D9CB20C /* Pods_p2hacksTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_p2hacksTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8847C28221165F800150E96 /* p2hacks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = p2hacks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8847C2B221165F800150E96 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F8847C2D221165F800150E96 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F8847C30221165F800150E96 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F8847C32221165FB00150E96 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F8847C35221165FB00150E96 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -158,7 +156,6 @@
 			isa = PBXGroup;
 			children = (
 				F8847C2B221165F800150E96 /* AppDelegate.swift */,
-				F8847C2D221165F800150E96 /* ViewController.swift */,
 				F8847C2F221165F800150E96 /* Main.storyboard */,
 				8C36AEF42216DC7100902556 /* SettingViewController.swift */,
 				F8847C32221165FB00150E96 /* Assets.xcassets */,
@@ -451,7 +448,6 @@
 			files = (
 				F8847C602215335D00150E96 /* AddListViewController.swift in Sources */,
 				F8847C5E22152BCE00150E96 /* ViewController2.swift in Sources */,
-				F8847C2E221165F800150E96 /* ViewController.swift in Sources */,
 				F8847C2C221165F800150E96 /* AppDelegate.swift in Sources */,
 				F8847C5A221512D900150E96 /* ProViewController.swift in Sources */,
 				8C36AEF52216DC7100902556 /* SettingViewController.swift in Sources */,
