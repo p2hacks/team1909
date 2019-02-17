@@ -226,7 +226,7 @@
                                 <rect key="frame" x="16" y="92" width="129" height="129"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
-                                    <segue destination="8Lx-kb-Xbi" kind="presentation" id="cL9-0X-2rF"/>
+                                    <segue destination="8Lx-kb-Xbi" kind="presentation" identifier="toCameraViewController" id="cL9-0X-2rF"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eaR-mt-91r">
@@ -558,6 +558,6 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="NRE-Vi-XCr"/>
-        <segue reference="Eoy-fH-B4q"/>
+        <segue reference="4WQ-XS-m6r"/>
     </inferredMetricsTieBreakers>
 </document>
