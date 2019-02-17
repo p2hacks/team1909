@@ -1,5 +1,5 @@
 # 名刺交換アプリ
-![ロゴ](アプリ1.png)
+![ロゴ](https://cdn-ak.f.st-hatena.com/images/fotolife/s/sugaken9914/20190217/20190217131837_120.jpg)
 
 ## 製品概要
 ### コンセプト
