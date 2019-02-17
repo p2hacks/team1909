@@ -18,6 +18,7 @@ class MyProSetViewController: UIViewController ,UITextFieldDelegate{
     @IBOutlet var backButton: UIButton!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet var Button: UIButton!
+    @IBOutlet weak var QRImageView: UIImageView!
     var image1:UIImage!
     var DBRef:DatabaseReference!
     var uuid: String! = UserDefaults.standard.string(forKey: "uuid")
@@ -61,23 +62,23 @@ class MyProSetViewController: UIViewController ,UITextFieldDelegate{
         //QRコードを生成します。
         //Generate QR code.
         let qr = CIFilter(name: "CIQRCodeGenerator", parameters: ["inputMessage": data, "inputCorrectionLevel": "M"])!
-        let sizeTransform = CGAffineTransform(scaleX: 10, y: 10)
-        let transTrans = CGAffineTransform(translationX: 50, y: -30)
-        let qrImage = qr.outputImage!.transformed(by: sizeTransform)
+        //let sizeTransform = CGAffineTransform(scaleX: 10, y: 10)
+        let transTrans = CGAffineTransform(scaleX: 10, y: 10)
+        let qrImage = qr.outputImage!.transformed(by: transTrans)
         let context = CIContext()
         let cgImage = context.createCGImage(qrImage, from: qrImage.extent)
         let uiImage = UIImage(cgImage: cgImage!)
         
         //作成したQRコードを表示します
         //Display QR code
-        let qrImageView = UIImageView()
-        qrImageView.contentMode = .scaleAspectFit
-        qrImageView.transform = sizeTransform
-        qrImageView.transform = transTrans
-        qrImageView.frame = self.view.frame
-        qrImageView.image = uiImage
-        self.view.addSubview(qrImageView)
-        
+//        let qrImageView = UIImageView()
+//        qrImageView.contentMode = .scaleAspectFit
+//        qrImageView.transform = sizeTransform
+//        qrImageView.transform = transTrans
+//        qrImageView.frame = self.view.frame
+//        qrImageView.image = uiImage
+//        self.view.addSubview(qrImageView)
+        QRImageView.image = uiImage
     
     }
     
