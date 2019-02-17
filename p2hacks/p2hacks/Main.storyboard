@@ -198,10 +198,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eaR-mt-91r">
-                                <rect key="frame" x="104" y="488" width="150" height="150"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d6i-WL-zPH">
                                 <rect key="frame" x="321" y="37" width="31" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -233,12 +229,17 @@
                                     <segue destination="8Lx-kb-Xbi" kind="presentation" id="cL9-0X-2rF"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eaR-mt-91r">
+                                <rect key="frame" x="98" y="471" width="150" height="150"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="DQL-NB-Fpi"/>
                     </view>
                     <connections>
                         <outlet property="Button" destination="fWJ-To-I5y" id="j6G-6T-tpl"/>
+                        <outlet property="QRImageView" destination="eaR-mt-91r" id="yFf-TT-5Ef"/>
                         <outlet property="backButton" destination="d6i-WL-zPH" id="2Pp-TR-DrY"/>
                         <outlet property="belongText" destination="CFq-Cy-aj9" id="A5F-Qd-YwA"/>
                         <outlet property="compButton" destination="lwY-S5-Jh0" id="8AD-0a-MeA"/>
