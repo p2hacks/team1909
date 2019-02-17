@@ -281,14 +281,6 @@
                                     <action selector="album:" destination="8Lx-kb-Xbi" eventType="touchUpInside" id="PM1-pg-oMw"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W51-OC-kkd">
-                                <rect key="frame" x="172" y="555" width="31" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="決定"/>
-                                <connections>
-                                    <action selector="Select:" destination="8Lx-kb-Xbi" eventType="touchUpInside" id="ReO-Dm-Ae3"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="78L-UP-G6b">
                                 <rect key="frame" x="308" y="38" width="31" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -565,7 +557,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="cL9-0X-2rF"/>
         <segue reference="NRE-Vi-XCr"/>
         <segue reference="Eoy-fH-B4q"/>
     </inferredMetricsTieBreakers>

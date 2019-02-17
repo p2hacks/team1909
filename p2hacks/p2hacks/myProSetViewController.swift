@@ -16,8 +16,9 @@ class MyProSetViewController: UIViewController ,UITextFieldDelegate{
     @IBOutlet var tellText:UITextField!
     @IBOutlet var mailText:UITextField!
     @IBOutlet var backButton: UIButton!
-    @IBOutlet weak var imageView: UIView!
+    @IBOutlet weak var imageView: UIImageView!
     @IBOutlet var Button: UIButton!
+    var image1:UIImage!
     var DBRef:DatabaseReference!
     var uuid: String! = UserDefaults.standard.string(forKey: "uuid")
     
@@ -46,6 +47,7 @@ class MyProSetViewController: UIViewController ,UITextFieldDelegate{
         let getTell = DBRef.child(uuid+"/tell/tell")
         getTell.observe(.value){(snap: DataSnapshot)in self.tellText.text = (snap.value! as AnyObject).description}
         
+        imageView.image = image1
         imageView.layer.borderColor = UIColor.red.cgColor
         imageView.layer.borderWidth = 2.0
         
@@ -79,6 +81,21 @@ class MyProSetViewController: UIViewController ,UITextFieldDelegate{
     
     }
     
+    //CameraViewControllerからの画像の受け渡し
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toViewController2" {//ProViewControllerへ遷移する場合
+            let cameraViewController = segue.destination as! CameraViewController
+            cameraViewController.image2 = imageView.image
+        }
+    }
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
+    
+    @IBAction func imageButton(){
+        performSegue(withIdentifier: "toCameraViewController",sender: nil)
+    }
+    
     @IBAction func myEdit(){
         compButton.isHidden = false
         nameText.isEnabled = true
@@ -104,9 +121,7 @@ class MyProSetViewController: UIViewController ,UITextFieldDelegate{
         mailText.isEnabled = false
         backButton.isEnabled = true
     }
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
+    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         // キーボードを閉じる
         textField.resignFirstResponder()
