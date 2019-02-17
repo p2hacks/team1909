@@ -85,6 +85,9 @@ class MyProSetViewController: UIViewController ,UITextFieldDelegate{
     //CameraViewControllerからの画像の受け渡し
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toViewController2" {//ProViewControllerへ遷移する場合
+            
+        }
+        if segue.identifier == "toCameraViewController" {
             let cameraViewController = segue.destination as! CameraViewController
             cameraViewController.image2 = imageView.image
         }
