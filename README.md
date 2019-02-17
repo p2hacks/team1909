@@ -1,6 +1,6 @@
 # 名刺交換アプリ
 <img width= "300" alt = "meishi1" src="https://cdn-ak.f.st-hatena.com/images/fotolife/s/sugaken9914/20190217/20190217132700.png">
-<img width= "300" alt = "meishi1" src="https://cdn-ak.f.st-hatena.com/images/fotolife/s/sugaken9914/20190217/20190217135311_120.jpg">
+<img width= "300" alt = "meishi1" src="https://cdn-ak.f.st-hatena.com/images/fotolife/s/sugaken9914/20190217/20190217135444_120.jpg">
 
 ## 製品概要
 ### コンセプト
