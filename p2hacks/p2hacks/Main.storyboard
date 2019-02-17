@@ -505,7 +505,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5eu-JC-P3d">
-                                <rect key="frame" x="31" y="34" width="119" height="119"/>
+                                <rect key="frame" x="32" y="34" width="119" height="119"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="名前:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mDl-7L-SD3">
@@ -556,6 +556,7 @@
                         <viewLayoutGuide key="safeArea" id="vZO-ne-paw"/>
                     </view>
                     <connections>
+                        <outlet property="Proimageview" destination="5eu-JC-P3d" id="X1E-CX-9QG"/>
                         <outlet property="belongLabel" destination="s9R-dY-7oD" id="9Xu-y8-3zb"/>
                         <outlet property="mailLabel" destination="S4B-fo-2KU" id="Ayd-p5-efR"/>
                         <outlet property="nameLabel" destination="bcL-Fu-add" id="jIw-pP-iMQ"/>
@@ -568,8 +569,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="cL9-0X-2rF"/>
-        <segue reference="NRE-Vi-XCr"/>
+        <segue reference="gVU-0i-xfy"/>
         <segue reference="Eoy-fH-B4q"/>
     </inferredMetricsTieBreakers>
 </document>
