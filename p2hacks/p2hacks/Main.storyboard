@@ -239,6 +239,7 @@
                     </view>
                     <connections>
                         <outlet property="Button" destination="fWJ-To-I5y" id="j6G-6T-tpl"/>
+                        <outlet property="QRImageView" destination="eaR-mt-91r" id="gas-bl-mk9"/>
                         <outlet property="backButton" destination="d6i-WL-zPH" id="2Pp-TR-DrY"/>
                         <outlet property="belongText" destination="CFq-Cy-aj9" id="A5F-Qd-YwA"/>
                         <outlet property="compButton" destination="lwY-S5-Jh0" id="8AD-0a-MeA"/>
@@ -250,7 +251,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I7c-QK-cAl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-423.19999999999999" y="-761.46926536731644"/>
+            <point key="canvasLocation" x="-596" y="-775"/>
         </scene>
         <!--Camera View Controller-->
         <scene sceneID="1wR-Nv-cYC">
@@ -568,7 +569,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="cL9-0X-2rF"/>
-        <segue reference="MYn-ug-0z9"/>
+        <segue reference="NRE-Vi-XCr"/>
         <segue reference="Eoy-fH-B4q"/>
     </inferredMetricsTieBreakers>
 </document>

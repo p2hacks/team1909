@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import FirebaseStorage
 
 class MyProSetViewController: UIViewController ,UITextFieldDelegate{
     @IBOutlet var compButton: UIButton!
@@ -22,7 +23,6 @@ class MyProSetViewController: UIViewController ,UITextFieldDelegate{
     var image1:UIImage!
     var DBRef:DatabaseReference!
     var uuid: String! = UserDefaults.standard.string(forKey: "uuid")
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -124,6 +124,18 @@ class MyProSetViewController: UIViewController ,UITextFieldDelegate{
         tellText.isEnabled = false
         mailText.isEnabled = false
         backButton.isEnabled = true
+      /*
+        let storage = Storage.storage()
+        let storageRef = storage.reference()
+        if let data = UIImagePNGRepresentation(imageView.image! ) {
+            let reference = storageRef.child("images/" + "1" + ".jpg")
+            reference.putData(data, metadata: nil, completion: { metaData, error in
+                print(metaData as Any)
+                print(error as Any)
+            })
+            dismiss(animated: true, completion: nil)
+        }
+*/
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {

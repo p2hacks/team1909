@@ -32,6 +32,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             self.window?.makeKeyAndVisible()
         };
         FirebaseApp.configure()
+        
+        let TODO = ["運営"] 
+        UserDefaults.standard.set(TODO, forKey: "TODOlist")
+        
         return true
     }
     

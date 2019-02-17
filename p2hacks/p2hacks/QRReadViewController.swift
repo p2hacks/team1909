@@ -108,7 +108,7 @@ class QRReadViewController: UIViewController, AVCaptureMetadataOutputObjectsDele
         if segue.identifier == "toViewController2" {//ProViewControllerへ遷移する場合
             let ViewController2 = segue.destination as! ViewController2
             //ProViewControllerへ選択された名前をテキストで渡す
-            ViewController2.qrText = qrText
+            ViewController2.text = qrText
             
         }
     }

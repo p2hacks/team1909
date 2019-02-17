@@ -13,15 +13,20 @@ class ViewController2: UIViewController, UITableViewDelegate, UITableViewDataSou
     @IBOutlet weak var tableView: UITableView!
     var TODO = ["運営"] //初期リスト
     var text = "" //遷移で得られるテキストを入れる変数
-    var qrText = ""
-    var QRText = ""
+//    var qrText = ""
+//    var QRText = ""
     var userDefaults = UserDefaults.standard
     var uuid: String! = UserDefaults.standard.string(forKey: "uuid")
+    
+   // userDefaults.register(default: )
     
     override func viewDidLoad() {
         super.viewDidLoad()        
         // Do any additional setup after loading the view, typically from a nib.
-        QRText = qrText
+//        QRText = qrText
+        //userDefaults.set(TODO, forKey: "TODOlist")
+        //var hoge = userDefaults.array(forKey: "TODOlist") as! [String]
+        //print(hoge)
     }
     
     override func viewWillAppear(_ animated: Bool) {
