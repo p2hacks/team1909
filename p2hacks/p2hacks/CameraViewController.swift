@@ -1,4 +1,5 @@
 import UIKit
+import Firebase
 
 class CameraViewController: UIViewController, UIImagePickerControllerDelegate,
 UINavigationControllerDelegate{

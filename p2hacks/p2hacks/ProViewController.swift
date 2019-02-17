@@ -9,6 +9,7 @@
 import UIKit
 import FirebaseDatabase
 import FirebaseCore
+import FirebaseStorage
 
 class ProViewController: UIViewController {
   
