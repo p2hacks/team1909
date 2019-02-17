@@ -14,7 +14,7 @@ class QRReadViewController: UIViewController, AVCaptureMetadataOutputObjectsDele
     
     // カメラやマイクの入出力を管理するオブジェクトを生成
     private let session = AVCaptureSession()
-    
+    var qrText = ""
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -80,15 +80,36 @@ class QRReadViewController: UIViewController, AVCaptureMetadataOutputObjectsDele
              以下はQRコードに紐づくWebサイトをSafariで開く例
              */
             
+            //文字列かどうか確認
+            if metadata.stringValue != nil {
+                qrText = metadata.stringValue!
+                self.session.stopRunning()
+                break
+            }
             // URLかどうかの確認
             if let url = URL(string: metadata.stringValue!) {
                 // 読み取り終了
                 self.session.stopRunning()
+                
                 // QRコードに紐付いたURLをSafariで開く
                 UIApplication.shared.open(url, options: [:], completionHandler: nil)
                 
                 break
             }
+        }
+    }
+    
+    @IBAction func comp(){
+        performSegue(withIdentifier: "ViewController2",sender: nil)
+        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any!) {
+        if segue.identifier == "toViewController2" {//ProViewControllerへ遷移する場合
+            let ViewController2 = segue.destination as! ViewController2
+            //ProViewControllerへ選択された名前をテキストで渡す
+            ViewController2.qrText = qrText
+            
         }
     }
 }

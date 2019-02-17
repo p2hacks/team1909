@@ -13,27 +13,24 @@ class ViewController2: UIViewController, UITableViewDelegate, UITableViewDataSou
     @IBOutlet weak var tableView: UITableView!
     var TODO = ["運営"] //初期リスト
     var text = "" //遷移で得られるテキストを入れる変数
-   
+    var qrText = ""
+    var QRText = ""
     var userDefaults = UserDefaults.standard
     var uuid: String! = UserDefaults.standard.string(forKey: "uuid")
     
     override func viewDidLoad() {
         super.viewDidLoad()        
         // Do any additional setup after loading the view, typically from a nib.
-        userDefaults.set(TODO, forKey: "TODOlist")
+        QRText = qrText
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(true)
         TODO = userDefaults.array(forKey: "TODOlist") as! [String]
-        if text.count > 0 {
         TODO.append(text)
         userDefaults.set(TODO, forKey: "TODOlist")
-        }else{
-            
-        }
 //        print("hoge",TODO)
         tableView.reloadData()
+        super.viewWillAppear(true)
 
     }
     
@@ -61,9 +58,6 @@ class ViewController2: UIViewController, UITableViewDelegate, UITableViewDataSou
 //    let getMaxSpeed:[Double] = userDefaults.array(forKey: "udMaxSpeed") as! [Double]
     // Segue 準備
     override func prepare(for segue: UIStoryboardSegue, sender: Any!) {
-      
-       
-        
         if (segue.identifier == "toQRReadViewController") {//QRReadViewControllerへ遷移する場合
             let _: QRReadViewController = (segue.destination as? QRReadViewController)!
         }
