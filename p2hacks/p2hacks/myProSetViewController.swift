@@ -16,8 +16,10 @@ class MyProSetViewController: UIViewController ,UITextFieldDelegate{
     @IBOutlet var tellText:UITextField!
     @IBOutlet var mailText:UITextField!
     @IBOutlet var backButton: UIButton!
-    @IBOutlet weak var imageView: UIView!
+    @IBOutlet weak var imageView: UIImageView!
     @IBOutlet var Button: UIButton!
+    @IBOutlet weak var QRImageView: UIImageView!
+    var image1:UIImage!
     var DBRef:DatabaseReference!
     var uuid: String! = UserDefaults.standard.string(forKey: "uuid")
     
@@ -46,6 +48,7 @@ class MyProSetViewController: UIViewController ,UITextFieldDelegate{
         let getTell = DBRef.child(uuid+"/tell/tell")
         getTell.observe(.value){(snap: DataSnapshot)in self.tellText.text = (snap.value! as AnyObject).description}
         
+        imageView.image = image1
         imageView.layer.borderColor = UIColor.red.cgColor
         imageView.layer.borderWidth = 2.0
         
@@ -59,24 +62,39 @@ class MyProSetViewController: UIViewController ,UITextFieldDelegate{
         //QRコードを生成します。
         //Generate QR code.
         let qr = CIFilter(name: "CIQRCodeGenerator", parameters: ["inputMessage": data, "inputCorrectionLevel": "M"])!
-        let sizeTransform = CGAffineTransform(scaleX: 10, y: 10)
-        let transTrans = CGAffineTransform(translationX: 50, y: -30)
-        let qrImage = qr.outputImage!.transformed(by: sizeTransform)
+        //let sizeTransform = CGAffineTransform(scaleX: 10, y: 10)
+        let transTrans = CGAffineTransform(scaleX: 10, y: 10)
+        let qrImage = qr.outputImage!.transformed(by: transTrans)
         let context = CIContext()
         let cgImage = context.createCGImage(qrImage, from: qrImage.extent)
         let uiImage = UIImage(cgImage: cgImage!)
         
         //作成したQRコードを表示します
         //Display QR code
-        let qrImageView = UIImageView()
-        qrImageView.contentMode = .scaleAspectFit
-        qrImageView.transform = sizeTransform
-        qrImageView.transform = transTrans
-        qrImageView.frame = self.view.frame
-        qrImageView.image = uiImage
-        self.view.addSubview(qrImageView)
-        
+//        let qrImageView = UIImageView()
+//        qrImageView.contentMode = .scaleAspectFit
+//        qrImageView.transform = sizeTransform
+//        qrImageView.transform = transTrans
+//        qrImageView.frame = self.view.frame
+//        qrImageView.image = uiImage
+//        self.view.addSubview(qrImageView)
+        QRImageView.image = uiImage
     
+    }
+    
+    //CameraViewControllerからの画像の受け渡し
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toViewController2" {//ProViewControllerへ遷移する場合
+            let cameraViewController = segue.destination as! CameraViewController
+            cameraViewController.image2 = imageView.image
+        }
+    }
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
+    
+    @IBAction func imageButton(){
+        performSegue(withIdentifier: "toCameraViewController",sender: nil)
     }
     
     @IBAction func myEdit(){
@@ -104,9 +122,7 @@ class MyProSetViewController: UIViewController ,UITextFieldDelegate{
         mailText.isEnabled = false
         backButton.isEnabled = true
     }
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
+    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         // キーボードを閉じる
         textField.resignFirstResponder()

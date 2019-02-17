@@ -7,10 +7,12 @@ UINavigationControllerDelegate{
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var label: UILabel!
     
+    var image2:UIImage!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        imageView.image = image2
         label.text = "Tap the [Start] to take a picture"
         
     }
@@ -76,9 +78,11 @@ UINavigationControllerDelegate{
     
     
     // 写真をプロフィール画面に設定
-    @IBAction func Select(_ sender: Any) {
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        
+        var myProSetViewController = segue.destination as! MyProSetViewController
+        myProSetViewController.image1 = imageView.image
         
     }
     
